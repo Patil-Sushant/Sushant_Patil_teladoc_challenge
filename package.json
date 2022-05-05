@@ -1,0 +1,11 @@
+{
+  "name": "sushant_patil_teladoc_challenge",
+  "version": "1.0.0",
+  "description": "Test Automation for Way2Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sushant Patil",
+  "license": "ISC"
+}
