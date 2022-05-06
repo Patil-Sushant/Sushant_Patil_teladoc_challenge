@@ -10,7 +10,7 @@ describe('User operations', () => {
             browser.manage().window().maximize();
             browser.sleep(1000);
         });
-        /*it('Click hyperlink: Add user', () => {
+        it('Click hyperlink: Add user', () => {
             element.all(by.css('button[ng-click*="pop()"]')).get(0).click();
         });
         it('Enter First Name', () => {
@@ -60,10 +60,6 @@ describe('User operations', () => {
             const userName = await addUserPopup.verifyUserName();
             expect(userName).toEqual('JohnSmith');
         });
-        // it('Verify customer', async () => {
-        //     const customer = await addUserPopup.verifyCustomer();
-        //     expect(customer).toEqual('Company BBB');
-        // });
         it('Verify role', async () => {
             const role = await addUserPopup.verifyRole();
             expect(role).toEqual('Admin');
@@ -75,7 +71,7 @@ describe('User operations', () => {
         it('Verify cell phone', async () => {
             const phone = await addUserPopup.verifyCellphone();
             expect(phone).toEqual('9995555366');
-        });*/
+        });
 
         // delete user
         it('Delete the created user', async () => {
