@@ -15,8 +15,6 @@ describe('User operations', () => {
         });
         it('Enter First Name', () => {
             expect(addUserPopup.enterFirstName('John')).toBe(true);
-            expect(addUserPopup.enterFirstName('123')).toBe(true);
-            // expect(validation).toBe("Numbers not accepted for firstname")
         });
         it('Enter last name', () => {
             expect(addUserPopup.enterLastName('Smith')).toBe(true);
@@ -44,7 +42,7 @@ describe('User operations', () => {
         });
         it('Save', () => {
             expect(addUserPopup.save()).toBe(true);
-            browser.sleep(5000);
+            browser.sleep(2000);
         });
 
         // User verification
