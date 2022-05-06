@@ -23,12 +23,10 @@ class AddUser {
         const verifyUserEmail = element.all(by.css('td.smart-table-data-cell')).get(6);
         const verifyUserCellphone = element.all(by.css('td.smart-table-data-cell')).get(7);
         
-        const deleteUser = element.all(by.css('button[ng-click="delUser()"]')).get(2);
+        const deleteUser = element.all(by.css('button[ng-click="delUser()"]')).get(3);
         const okButton = element.all(by.css('button[ng-click="close(btn.result)"]')).last();
 
         const verifyDeletedUser = element(by.css('tr.smart-table-data-row:nth-child(3) > td:nth-child(2)'));
-
-        // const elementTableRows = element.all(by.css('tr.smart-table-data-row')).get(3);
 
         // ---------------------------------------------------------------------------------------------
         // Add user: elements base xpath (pending substitution)
@@ -41,13 +39,14 @@ class AddUser {
 
         this.enterFirstName = async (fname) => {
             try {
-                    firstName.click();
+                   firstName.click();
                     firstName.sendKeys(fname);
                     browser.sleep(500);
                 }
             catch (e) {
                 return false;
             }
+            return true;
         };
 
         this.enterLastName = (lname) => {
@@ -59,6 +58,7 @@ class AddUser {
             catch (e) {
                 return false;
             }
+            return true;
         };
 
         this.enterUserName = (username) => {
@@ -82,6 +82,7 @@ class AddUser {
             catch (e) {
                 return false;
             }
+            return true;
         };
     
         this.chooseCustomer = (number) => {
@@ -94,6 +95,7 @@ class AddUser {
             catch (e) {
                 return false;
             }
+            return true;
         };
 
         this.clickRole = () => {
@@ -104,6 +106,7 @@ class AddUser {
             catch (e) {
                 return false;
             }
+            return true;
         };
     
         this.chooseRole = (number) => {
@@ -116,17 +119,19 @@ class AddUser {
             catch (e) {
                 return false;
             }
+            return true;
         };
 
         this.enterEmail = (e_mail) => {
             try {
-                   email.click();
-                   email.sendKeys(e_mail);
-                   browser.sleep(500);
+                    email.click();
+                    email.sendKeys(e_mail);
+                    browser.sleep(500);
                 }
             catch (e) {
                 return false;
             }
+            return true;
         };
 
         this.enterPhoneNumber = (phone) => {
@@ -220,20 +225,10 @@ class AddUser {
         // delete user
         this.deleteUser = () => {
             try {
-                    deleteUser.click();
-                    browser.sleep(500);
-                    okButton.click();
-                    // $("table.smart-table.table.table-striped tr.thisRow").each(function() {
-                    //     var thisRow = $(this);
-                    //     var match = thisRow.find(".match");
-                
-                    //     // note the `==` operator
-                    //     if(match.text() == "Novak") {
-                    //         thisRow.hide(); 
-                    //         // OR thisRow.remove();
-                    //     }
-                    // });
-                }
+                deleteUser.click();
+                browser.sleep(500);
+                okButton.click();
+            }
             catch (e) {
                 return false;
             }

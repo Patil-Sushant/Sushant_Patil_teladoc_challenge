@@ -1,7 +1,7 @@
 const { browser } = require('protractor');
-const AddUserPopup = require('./addUserModal');
+const AddUserModal = require('../Sushant_Patil_Teladoc_Challenge/addUserModal');
 
-const addUserPopup = new AddUserPopup();
+const addUserModal = new AddUserModal();
 
 describe('User operations', () => {
     describe('Add a new user', () => {
@@ -10,76 +10,76 @@ describe('User operations', () => {
             browser.manage().window().maximize();
             browser.sleep(1000); 
         });
-       /* it('Click hyperlink: Add user', () => {
+        it('Click hyperlink: Add user', () => {
             element.all(by.css('button[ng-click*="pop()"]')).get(0).click();
         });
         it('Enter First Name', () => {
-            expect(addUserPopup.enterFirstName('John')).toBe(true);
+            expect(addUserModal.enterFirstName('John')).toBe(true);
         });
         it('Enter last name', () => {
-            expect(addUserPopup.enterLastName('Smith')).toBe(true);
+            expect(addUserModal.enterLastName('Smith')).toBe(true);
         });
         it('Enter username', async () => {
-            expect(addUserPopup.enterUserName('JohnSmith')).toBe(true);
+            expect(addUserModal.enterUserName('JohnSmith')).toBe(true);
         });
         it('Enter password', async () => {
-            expect(addUserPopup.enterPassword('Password123!')).toBe(true);
+            expect(addUserModal.enterPassword('Password123!')).toBe(true);
         });
         it('Choose customer', async () => {
-            expect(addUserPopup.chooseCustomer(2)).toBe(true);
+            expect(addUserModal.chooseCustomer(2)).toBe(true);
         });
         it('Click dropdown: Role', () => {
-            expect(addUserPopup.clickRole()).toBe(true);
+            expect(addUserModal.clickRole()).toBe(true);
         });
         it('Choose role', () => {
-            expect(addUserPopup.chooseRole(4)).toBe(true);
+            expect(addUserModal.chooseRole(4)).toBe(true);
         });
         it('Enter email', () => {
-            expect(addUserPopup.enterEmail('johnsmith12@gmail.com')).toBe(true);
+            expect(addUserModal.enterEmail('johnsmith12@gmail.com')).toBe(true);
         });
         it('Enter phone #', () => {
-            expect(addUserPopup.enterPhoneNumber(9995555366)).toBe(true);
+            expect(addUserModal.enterPhoneNumber(9995555366)).toBe(true);
         });
         it('Save', () => {
-            expect(addUserPopup.save()).toBe(true);
+            expect(addUserModal.save()).toBe(true);
             browser.sleep(2000);
         });
 
         // User verification
         it('Verify first name of the user', async () => {
-            const fName = await addUserPopup.verifyUserFirstName();
+            const fName = await addUserModal.verifyUserFirstName();
             expect(fName).toEqual('John');
         });
         it('Verify last name of the user', async () => {
-            const lName = await addUserPopup.verifyUserLastName();
+            const lName = await addUserModal.verifyUserLastName();
             expect(lName).toEqual('Smith');
         });
         it('Verify user name of the user', async () => {
-            const userName = await addUserPopup.verifyUserName();
+            const userName = await addUserModal.verifyUserName();
             expect(userName).toEqual('JohnSmith');
         });
         it('Verify role', async () => {
-            const role = await addUserPopup.verifyRole();
+            const role = await addUserModal.verifyRole();
             expect(role).toEqual('Admin');
         });
         it('Verify email', async () => {
-            const email = await addUserPopup.verifyEmail();
+            const email = await addUserModal.verifyEmail();
             expect(email).toEqual('johnsmith12@gmail.com');
         });
         it('Verify cell phone', async () => {
-            const phone = await addUserPopup.verifyCellphone();
+            const phone = await addUserModal.verifyCellphone();
             expect(phone).toEqual('9995555366');
-        });*/
+        });
 
         // delete user
         it('Delete the created user', async () => {
-            addUserPopup.deleteUser();
-            browser.sleep(2000);
+            addUserModal.deleteUser();
+            browser.sleep(1000);
         });
 
         // verify that the deleted user does not exist
         it('Verify first name of the user', async () => {
-            const lName = await addUserPopup.verifyUserAfterDeleting();
+            const lName = await addUserModal.verifyUserAfterDeleting();
             expect(lName).not.toEqual('Novak');
         });
     });
