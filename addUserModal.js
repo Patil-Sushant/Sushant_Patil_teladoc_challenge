@@ -225,10 +225,10 @@ class AddUser {
         // delete user
         this.deleteUser = () => {
             try {
-                deleteUser.click();
-                browser.sleep(500);
-                okButton.click();
-            }
+                    deleteUser.click();
+                    browser.sleep(500);
+                    okButton.click();
+                }
             catch (e) {
                 return false;
             }
