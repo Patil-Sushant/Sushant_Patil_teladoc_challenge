@@ -10,7 +10,7 @@ describe('User operations', () => {
             browser.manage().window().maximize();
             browser.sleep(1000); 
         });
-       /* it('Click hyperlink: Add user', () => {
+        it('Click hyperlink: Add user', () => {
             element.all(by.css('button[ng-click*="pop()"]')).get(0).click();
         });
         it('Enter First Name', () => {
@@ -69,7 +69,7 @@ describe('User operations', () => {
         it('Verify cell phone', async () => {
             const phone = await addUserPopup.verifyCellphone();
             expect(phone).toEqual('9995555366');
-        });*/
+        });
 
         // delete user
         it('Delete the created user', async () => {
