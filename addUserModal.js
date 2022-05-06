@@ -26,8 +26,9 @@ class AddUser {
         const deleteUser = element.all(by.css('button[ng-click="delUser()"]')).get(2);
         const okButton = element.all(by.css('button[ng-click="close(btn.result)"]')).last();
 
-        const verifyDeletedUser = element.all(by.css('td.smart-table-data-cell')).get(22);
+        const verifyDeletedUser = element(by.css('tr.smart-table-data-row:nth-child(3) > td:nth-child(2)'));
 
+        // const elementTableRows = element.all(by.css('tr.smart-table-data-row')).get(3);
 
         // ---------------------------------------------------------------------------------------------
         // Add user: elements base xpath (pending substitution)
@@ -222,6 +223,16 @@ class AddUser {
                     deleteUser.click();
                     browser.sleep(500);
                     okButton.click();
+                    // $("table.smart-table.table.table-striped tr.thisRow").each(function() {
+                    //     var thisRow = $(this);
+                    //     var match = thisRow.find(".match");
+                
+                    //     // note the `==` operator
+                    //     if(match.text() == "Novak") {
+                    //         thisRow.hide(); 
+                    //         // OR thisRow.remove();
+                    //     }
+                    // });
                 }
             catch (e) {
                 return false;
