@@ -23,7 +23,7 @@ class AddUser {
         const verifyUserEmail = element.all(by.css('td.smart-table-data-cell')).get(6);
         const verifyUserCellphone = element.all(by.css('td.smart-table-data-cell')).get(7);
         
-        const deleteUser = element.all(by.css('button[ng-click="delUser()"]')).get(2);
+        const deleteUser = element.all(by.css('button[ng-click="delUser()"]')).get(3);
         const okButton = element.all(by.css('button[ng-click="close(btn.result)"]')).last();
 
         const verifyDeletedUser = element(by.css('tr.smart-table-data-row:nth-child(3) > td:nth-child(2)'));
@@ -223,16 +223,6 @@ class AddUser {
                     deleteUser.click();
                     browser.sleep(500);
                     okButton.click();
-                    // $("table.smart-table.table.table-striped tr.thisRow").each(function() {
-                    //     var thisRow = $(this);
-                    //     var match = thisRow.find(".match");
-                
-                    //     // note the `==` operator
-                    //     if(match.text() == "Novak") {
-                    //         thisRow.hide(); 
-                    //         // OR thisRow.remove();
-                    //     }
-                    // });
                 }
             catch (e) {
                 return false;
